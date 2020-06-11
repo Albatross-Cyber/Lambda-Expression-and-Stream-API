@@ -148,21 +148,41 @@ I have coverend the various aspects of lambda present in com.learnJava.lambda pa
 ![image](https://user-images.githubusercontent.com/65066310/84445685-c2e7d580-ac61-11ea-94e0-0d499426096a.png)
 
 
-**Where to use Method Reference ?**
+
+
+
+Where to use Method Reference ?
 ![image](https://user-images.githubusercontent.com/65066310/84445846-d72bd280-ac61-11ea-9503-d1a2eb9ac2cc.png)
 
 
-**Where Method Reference is not applicable?**
+
+
+
+
+
+
+Where Method Reference is not applicable?
 ![image](https://user-images.githubusercontent.com/65066310/84445881-f1fe4700-ac61-11ea-89ba-4893175986b2.png)
 
 
-**Constructor Reference**
 
+
+
+
+
+
+
+Constructor Reference
 Syntax :  Classname::new
+
+
 
 ***We can only use Constructor Reference in the context of Functional Interfaces.***
 
 ![image](https://user-images.githubusercontent.com/65066310/84445992-34c01f00-ac62-11ea-8dcb-de0a012f4e7f.png)
+
+
+
 
 
 ![image](https://user-images.githubusercontent.com/65066310/84446125-7d77d800-ac62-11ea-8549-06ac0111f45f.png)
