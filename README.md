@@ -145,14 +145,21 @@ I have coverend the various aspects of lambda present in com.learnJava.lambda pa
 ![image](https://user-images.githubusercontent.com/65066310/84445437-a8adf780-ac61-11ea-88de-22715adf5f8f.png)
 
 
+
+
+
+
+
+
+
+
+
 ![image](https://user-images.githubusercontent.com/65066310/84445685-c2e7d580-ac61-11ea-94e0-0d499426096a.png)
 
 
 
 
 
-Where to use Method Reference ?
-![image](https://user-images.githubusercontent.com/65066310/84445846-d72bd280-ac61-11ea-9503-d1a2eb9ac2cc.png)
 
 
 
@@ -161,27 +168,34 @@ Where to use Method Reference ?
 
 
 
-Where Method Reference is not applicable?
-![image](https://user-images.githubusercontent.com/65066310/84445881-f1fe4700-ac61-11ea-89ba-4893175986b2.png)
+**Where to use Method Reference ?**
+
+* Lambda expressions referring to a method directly.
+
+Using Lambda:
+``` Java Function<String,String> upperCase =  (name) -> name.toUpperCase();```
+
+Using Method Reference:
+``` Java Function<String,String> upperCase =  (name) -> String::toUpperCase();```
 
 
 
 
+**Where Method Reference is not applicable?**
+``` Java Predicate<Student> predicateUsingLambda = (s) -> s.getGradelevel()>=3;```
 
 
 
-
-
-Constructor Reference
+**Constructor Reference**
 Syntax :  Classname::new
-
-
-
 ***We can only use Constructor Reference in the context of Functional Interfaces.***
 
-![image](https://user-images.githubusercontent.com/65066310/84445992-34c01f00-ac62-11ea-8dcb-de0a012f4e7f.png)
+Example:
+``` Java Supplier<Student> studentSupplier = Student::new;```
 
 
+Invalid:
+``` Java Student student = Student::new; //Compilation Issue```
 
 
 
