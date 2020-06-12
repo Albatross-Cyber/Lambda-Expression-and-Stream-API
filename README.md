@@ -319,6 +319,113 @@ If the first expression evaluates to true then the second expression wont even e
 ```  
 
 
+***Stream APIs have an internal state but not all stream functions maintain and internal state***  
+
+
+![image](https://user-images.githubusercontent.com/65066310/84538686-b4f08e00-ad0f-11ea-8a2f-8c891d304aca.png)  
+
+
+
+Intermediate Operations  
+``` 
+Stateful functions   
+distinct()  
+sorted()  
+skip()  
+limit()  
+
+Stateless functions  
+map()  
+filter(), etc.  
+```  
+
+
+***Stateful Functions***  
+``` Java
+public static List<String> printUniqueStudentActivities() { 
+  List<String> studentActivities = StudentDataBase.getAllStudents()
+		  			.stream()
+		  			.map(Student::getActivities)
+		  			.flatMap(List::stream)
+		  	                .distinct() // needs the state of the previously processed elements
+		  		        .sorted() // needs the state of the previously processed elements
+		  		        .collect(toList());
+  	return studentActivities;
+}
+```  
+
+
+***Stateless Functions***  
+``` Java
+public static List<String> namesUpperCase(List<Student> names){ 
+  List<String> namesUpperCase = names.stream() //Stream<Student>
+			             .map(Student::getName) //Stream<String> - stateless
+				     .map(String::toUpperCase) // Stream<String> -> UpperCase - stateless
+				     .collect(toList()); // returns List - stateless
+	return namesUpperCase;
+}
+```  
+
+
+### Stream API : Factory methods  
+of(), iterate() and generate()  
+```  
+Of() -> Creates a stream of certain values passed to this method.  
+Example:  
+Stream<String> stringStream = Stream.of(“adam”,”dan”,”Julie”);  
+
+
+iterate(), generate() -> Used to create infinite Streams.  
+Example:  
+Stream.iterate(1, x->x*2)  
+
+Example:
+Stream.generate(<Supplier>)
+```  
+
+
+### Numeric Streams  
+Represents the primitive values in a Stream.  
+IntStream  
+LongStream  
+DoubleStream    
+
+
+Int Stream:  
+IntStream.range(1,50) -> Returns an IntStream of 49 elements from 1 to 49.  
+IntStream.rangeClosed(1,50) -> Returns an IntStream of 50 elements from 1 to 50.  
+Long Stream:  
+LongStream.range(1,50) -> Returns a LongStream of 49 elements from 1 to 49.  
+LongStream.rangeClosed(1,50) -> Returns a LongStream of 50 elements from 1 to 50.  
+DoubleStream:  
+It does not support the range ()and rangeClosed().  
+sum()  
+max()  
+min()  
+average()  
+
+
+Numeric	Streams : Boxing() and UnBoxing()  
+Boxing():  
+Converting a primitive type to Wrapper Class type  
+Example: Converting an int (primitive) to Integer(wrapper).    
+
+UnBoxing():  
+Converting a Wrapper Class type to primitive type.  
+Example: Converting an Integer(wrapper) to int(primitive).  
+
+Numeric Streams – mapToObj(), mapToLong(), mapToDouble()  
+mapToObj –> Convert a each element numeric stream to some Object.  
+mapToLong –> Convert a numeric stream to a Long Stream.  
+mapToDouble –> Convert a numeric stream to a Double Stream.  
+
+
+### Stream Terminal Opertaions  
+
+
+
+
+
 
 
 
