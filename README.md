@@ -271,7 +271,55 @@ public class StreamsExample {
 
 
 
--- Author - Abhinav
+### Stream API : map()
+It is used to convert(trasform) one type to another. Don't get confused this with map collection.  
+
+
+### Stream API : flatMap()
+Converts(Transforms) one type to another as like map() method and is used in the context of Stream where each element in the stream represents multiple elements.
+Example: Stream<List>, Steam<Arrays>  
+
+
+### Stream API : distinct(), count() and sorted()  
+distinct – Returns a stream with unique elements
+count – Returns a long with the total no of elements in the Stream.
+sorted - Sort the elements in the stream
+
+
+### Stream API : filter()  
+filters the elements in the stream. Input to the filter is a ***Predicate*** Functional Interface.  
+
+
+### Stream API : reduce()  
+This is also a terminal operation like reduce and is used to reduce the contents of a stream to a single value. It takes two parameters as an input.  
+First parameters – default or initial value
+Second Parameter – BinaryOperator<T>
+
+
+### Stream API : Max/Min using reduce(), limit(), skip(), anyMatch(), allMatch(), noneMatch(), findFirst() and findAny().  
+All these functions except Max/Min and skip() does not have to iterate the whole stream to evaluate the result and are short circuit functions.  
+
+
+***Short Circuiting***  
+Examples of Short Circuiting:  
+``` Java
+Example 1:
+if(boolean1 && boolean2){ //AND
+//body
+}
+
+If the first expression evaluates to false then the second expression wont even execute.
+
+Example 2:
+if(boolean1 || boolean2){ //OR
+//body
+}
+
+If the first expression evaluates to true then the second expression wont even execute.
+```  
+
+
+
 
 
 
