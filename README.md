@@ -421,6 +421,53 @@ mapToDouble –> Convert a numeric stream to a Double Stream.
 
 
 ### Stream Terminal Opertaions  
+Terminal Operations collects the data for you and starts the whole stream pipeline.  
+```  
+Terminal Operations:     
+forEach()  
+min()  
+max()  
+reduce()  
+collect() and etc.  
+```  
+
+***Collect()***  
+The collect() method takes in an input of type Collector and produces the result as per the input passed to the collect() method. Basically, it behaves like an accumulator and takes the input untill the streams are exhausted.  
+joining() Collector performs the String concatenation on the elements in the stream. It has three different overloaded versions.
+
+counting() Collector returns the total number of elements as a result.  
+
+***mapping()*** collector applies a transformation function first and then collects the data in a collection (could be any type of collection).  
+
+***maxBy() and minBy()***  
+Comparator as an input parameter and Optional as an output.  
+maxBy()  
+This collector is used in conjunction with comparator. Returns the max element based on the property passed to the comparator.  
+
+minBy()  
+This collector is used in conjunction with comparator. Returns the smallest element based on the property passed to the comparator.  
+
+summingInt() – this collector returns the sum as a result.  
+averagingInt() – this collector returns the average as a result.  
+
+
+***groupingBy()*** collector is equivalent to the groupBy() operation in SQL.  
+Used to group the elements based on a property.The output of the groupingBy() is going to be a Map<K,V>. There are three different versions of groupingBy()  
+groupingBy(classifier)  
+groupingBy(classifier,downstream)  
+groupingBy(classifier,supplier,downstream)  
+
+***partitioningBy()*** collector is also a kind of groupingBy(). It accepts a predicate as an input and return type of the collector is going to be Map<K,V>. The key of the return type is going to be a Boolean. There are two different versions of partitioningBy().  
+partitioningBy(predicate)  
+partitioningBy(predicate,downstream) // downstream -> could be of any collector  
+
+
+
+
+
+
+
+
 
 
 
