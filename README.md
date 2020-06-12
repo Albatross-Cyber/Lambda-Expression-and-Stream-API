@@ -222,7 +222,7 @@ Prior to Java 8, any variables that's used inside the anonymous class should be 
 
 
 ### Introduction to Streams API  
-Main purpose is to perform some opertaions on collections. Parallel opertions are easy to perform with Streams API without having to spawn a multiple threads. Streams is a sequence of elements which can be created out of List/Arrays or any kind of I/O. **Package java.util.stream** [Oracle-doc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+Main purpose is to perform some opertaions on collections. Parallel opertions are easy to perform with Streams API without having to spawn a multiple threads. Streams is a sequence of elements which can be created out of List/Arrays or any kind of I/O. Also one thing to notice in the examples is that Stream APIs are ***lazy*** in nature **Package java.util.stream** [Oracle-doc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
 
 
 ``` Java
@@ -235,6 +235,19 @@ Streams operation can be performed either ***sequentially*** or ***parallel***.
 ``` Java
 names.parallelStream();
 ```   
+
+![image](https://user-images.githubusercontent.com/65066310/84498218-d3ce3080-accd-11ea-984f-e19776e20ecc.png)  
+
+
+
+
+
+![image](https://user-images.githubusercontent.com/65066310/84498647-acc42e80-acce-11ea-97f1-4314edd4d4b0.png)  
+![image](https://user-images.githubusercontent.com/65066310/84498703-ca919380-acce-11ea-9eef-eacb39a50a25.png)  
+
+
+
+
 
 
 
