@@ -1,3 +1,7 @@
+![image](https://img.shields.io/apm/l/vim-mode?color=Green&logo=MIT&logoColor=License)
+![image](https://img.shields.io/appveyor/build/gruntjs/grunt?style=flat-square)
+![image](https://img.shields.io/azure-devops/coverage/swellaby/opensource/25)
+
 # Lambda-Expression-and-Stream-API
 
 Lambda Expressions & Stream API in Java 8.
