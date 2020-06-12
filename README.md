@@ -207,15 +207,18 @@ Invalid:
 ``` Java Student student = Student::new; //Compilation Issue```
 
 
+### Effectively Final  
+Lambda's are allowed to use local variables but not allowed to modify it even though they are not declared final. This concept is called Effectively Final.  
 
-![image](https://user-images.githubusercontent.com/65066310/84446125-7d77d800-ac62-11ea-8549-06ac0111f45f.png)
+``` Java
+int value = 4;
+Consumer<Integer> c1 = (a) -> {
+    // value = 6; // reassigning not allowed
+    // System.out.println(i+value);
+};    
+```  
 
-
-
-
-
-
-
+Prior to Java 8, any variables that's used inside the anonymous class should be declared ***final***.  
 
 
 ### Introduction to Streams API  
@@ -231,7 +234,9 @@ names.stream(); //creates a stream
 Streams operation can be performed either ***sequentially*** or ***parallel***.  
 ``` Java
 names.parallelStream();
-``` 
+```   
+
+
 
 
 
