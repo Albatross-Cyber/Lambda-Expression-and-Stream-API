@@ -239,6 +239,29 @@ names.parallelStream();
 ![image](https://user-images.githubusercontent.com/65066310/84498218-d3ce3080-accd-11ea-984f-e19776e20ecc.png)  
 
 
+``` Java
+public class StreamsExample {
+
+	public static void main(String[] args) {
+		
+	    Predicate<Student> p1 = (s) -> s.getGradeLevel()>=3;
+	    Predicate<Student> p2 = (s) -> s.getGpa()>=3.9;
+	    
+	    Map<String, List<String>> studentMap = StudentDataBase.getAllStudents().stream()
+	    		// We can use peek method to debug the stream APIs after each step
+	    		/*.peek((student -> {
+                    System.out.println(student);
+                 }))*/ 
+	    		.filter(p1)//Stream<Students>
+	    		.filter(p2)//Stream<Students>
+	    		.collect(Collectors.toMap(Student::getName ,Student::getActivities )); //Map
+	    
+	    System.out.println(studentMap);
+	}
+}
+```  
+
+
 
 
 
