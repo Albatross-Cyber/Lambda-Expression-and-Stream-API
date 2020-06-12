@@ -185,25 +185,53 @@ Using Method Reference:
 
 
 
-**Where Method Reference is not applicable?**
+**Where Method Reference is not applicable?**  
 ``` Java Predicate<Student> predicateUsingLambda = (s) -> s.getGradelevel()>=3;```
 
 
 
-**Constructor Reference**
-Syntax :  Classname::new
-***We can only use Constructor Reference in the context of Functional Interfaces.***
-
-Example:
-``` Java Supplier<Student> studentSupplier = Student::new;```
+**Constructor Reference**  
 
 
-Invalid:
+Syntax :  Classname::new  
+
+
+***We can only use Constructor Reference in the context of Functional Interfaces.***  
+
+
+Example:  
+``` Java Supplier<Student> studentSupplier = Student::new;```  
+
+
+Invalid:  
 ``` Java Student student = Student::new; //Compilation Issue```
 
 
 
 ![image](https://user-images.githubusercontent.com/65066310/84446125-7d77d800-ac62-11ea-8549-06ac0111f45f.png)
+
+
+
+
+
+
+
+
+
+### Introduction to Streams API  
+Main purpose is to perform some opertaions on collections. Parallel opertions are easy to perform with Streams API without having to spawn a multiple threads. Streams is a sequence of elements which can be created out of List/Arrays or any kind of I/O. **Package java.util.stream** [Oracle-doc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+
+
+``` Java
+List<String> names = Arrays.asList("Adam","Dan","Jenny");
+names.stream(); //creates a stream
+``` 
+
+
+Streams operation can be performed either ***sequentially*** or ***parallel***.  
+``` Java
+names.parallelStream();
+``` 
 
 
 
