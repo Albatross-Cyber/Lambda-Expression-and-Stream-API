@@ -486,6 +486,11 @@ How many Threads are created ?
 Number of threads created == number of processors available in the machine.  
 
 
+### Introduction to Optional  
+Introduced as part of Java 8 to represent a Non-Null value and avoids Null Pointer Exception and Unnecessary Null Checks. Inspired from the new languages such as scala , groovy etc.  
+
+[Baeldung - Java 8 Stream API](https://www.baeldung.com/java-8-streams)  
+
 
 
 
