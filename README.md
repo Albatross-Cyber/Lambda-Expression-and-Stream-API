@@ -463,6 +463,33 @@ partitioningBy(predicate,downstream) // downstream -> could be of any collector
 
 
 
+### Parallel Stream  
+Splits the source of data in to multiple parts, process them parallelly and then combine the result.  
+``` Java
+How to Create a Parallel Stream ?  
+
+Sequential Stream:    
+IntStream.rangeClosed(1,1000)  
+.sum();  
+
+Parallel Stream:  
+IntStream.rangeClosed(1,1000)  
+.parallel()  
+.sum();  
+```  
+
+
+How Parallel Stream works ?  
+Parallel Stream uses the Fork/Join framework that got introduced in Java 7.  
+
+How many Threads are created ?  
+Number of threads created == number of processors available in the machine.  
+
+
+
+
+
+
 
 
 
