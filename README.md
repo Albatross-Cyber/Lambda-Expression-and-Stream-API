@@ -221,7 +221,7 @@ Consumer<Integer> c1 = (a) -> {
 Prior to Java 8, any variables that's used inside the anonymous class should be declared ***final***.  
 
 
-***[Lambda Expressions and Functional Interfaces: Tips and Best Practices]***(https://www.baeldung.com/java-8-lambda-expressions-tips)  
+***[Lambda Expressions and Functional Interfaces: Tips and Best Practices](https://www.baeldung.com/java-8-lambda-expressions-tips)***  
 
 
 ### Introduction to Streams API  
