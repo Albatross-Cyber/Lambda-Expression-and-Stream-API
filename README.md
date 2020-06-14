@@ -221,6 +221,9 @@ Consumer<Integer> c1 = (a) -> {
 Prior to Java 8, any variables that's used inside the anonymous class should be declared ***final***.  
 
 
+***[Lambda Expressions and Functional Interfaces: Tips and Best Practices]***(https://www.baeldung.com/java-8-lambda-expressions-tips)  
+
+
 ### Introduction to Streams API  
 Main purpose is to perform some opertaions on collections. Parallel opertions are easy to perform with Streams API without having to spawn a multiple threads. Streams is a sequence of elements which can be created out of List/Arrays or any kind of I/O. Also one thing to notice in the examples is that Stream APIs are ***lazy*** in nature **Package java.util.stream** [Oracle-doc](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
 
